@@ -6,20 +6,12 @@ function [X_poly] = polyFeatures(X, p)
 %
 
 
-% You need to return the following variables correctly.
+% Initialize X_poly
 X_poly = zeros(numel(X), p);
+X_poly(:,1) = X;
 
-% ====================== YOUR CODE HERE ======================
-% Instructions: Given a vector X, return a matrix X_poly where the p-th 
-%               column of X contains the values of X to the p-th power.
-%
-% 
-
-
-
-
-
-
-% =========================================================================
+% Set each column to the some power of X
+for pow = 1:p
+  X_poly(:,pow) = X .^ pow;
 
 end
